@@ -1,0 +1,48 @@
+body{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+header{
+	background: #27233E;
+	height: 5vw;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+
+
+}
+nav a img{
+	width: 5vw;
+}
+
+#logo{
+	padding-top:0;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	padding-top: 2vw;	
+	margin-right: 5vw;
+}
+
+figure {
+	margin: 0;
+}
+
+figure figcaption {
+    position:absolute;
+    width:45vw;
+    height: 20vw;
+    background:rgba(255,255,255, 0.5);
+    top:13vw;
+    left:27vw;
+    padding:0 1vw 2vw 0;
+}
+figure figcaption h1 {
+	text-align: center;
+
+}
