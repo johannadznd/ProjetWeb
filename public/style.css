@@ -46,3 +46,20 @@ figure figcaption h1 {
 	text-align: center;
 
 }
+
+footer{
+	background: #27233E;
+	height: 5vw;
+}
+
+footer li{
+	display: flex;
+	justify-content: space-around;
+}
+
+footer a {
+	text-decoration: none ;
+	color: white;
+	font-size: 20px;
+	padding-top:2vw;
+}
