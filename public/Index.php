@@ -12,8 +12,6 @@ require_once '../views/Layout/header.php';
     </figure>
 	
 </main>
-<footer>
-	
-</footer>
-</body>
-</html>
+<?php 
+require_once '../views/Layout/footer.php';
+?>
