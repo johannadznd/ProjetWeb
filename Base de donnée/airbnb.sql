@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 23 mars 2020 à 08:25
+-- Généré le :  lun. 23 mars 2020 à 14:09
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.3.5
 
@@ -45,15 +45,19 @@ CREATE TABLE IF NOT EXISTS `announce` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `id`
+-- Structure de la table `avis`
 --
 
-DROP TABLE IF EXISTS `id`;
-CREATE TABLE IF NOT EXISTS `id` (
-  `IdUser` int(11) DEFAULT NULL,
-  `IdReservation` int(11) DEFAULT NULL,
-  KEY `IdUser` (`IdUser`),
-  KEY `IdReservation` (`IdReservation`)
+DROP TABLE IF EXISTS `avis`;
+CREATE TABLE IF NOT EXISTS `avis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idUser` int(11) DEFAULT NULL,
+  `idReservation` int(11) DEFAULT NULL,
+  `commentaire` text,
+  `note` tinyint(5) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idUser` (`idUser`),
+  KEY `idReservation` (`idReservation`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -87,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `UserName` varchar(100) DEFAULT NULL,
   `Email` varchar(250) DEFAULT NULL,
   `Password` varchar(250) DEFAULT NULL,
-  `FirtName` varchar(100) DEFAULT NULL,
+  `FirstName` varchar(100) DEFAULT NULL,
   `LastName` varchar(100) DEFAULT NULL,
   `ProfilPicture` varchar(100) DEFAULT NULL,
   `CreditAccount` int(11) DEFAULT NULL,
