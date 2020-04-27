@@ -1,33 +1,42 @@
 <?php
 
 require_once '../views/Layout/header.php';
+require_once '../Fonctions/bien.php';
+$search = $_GET['search'] ?? null ;
+$place = $_GET['place'] ?? null ;
 
+$biens = getAnnounce($search,$place);
 ?>
 <main>
 	 <figure>
 	 	<img src="Image/montagne.jpg">
         <figcaption>
 			<h1>Recherche</h1>
-		<div id="ville"> 
+		<form action="recherche.php">
+		<div > 
 			<label>Ou voulez-vous partir : </label>
-			<input>
+			<input type="text" id="search" name="search" placeholder="Lyon" >
 		</div>
 		<div id="date">
 			<label>Date d'arrivé : </label>
-			<input>
+			<input type="date" >
 			<label>Date de départ : </label>
-			<input>
+			<input type="date" >
 		</div>
 		<div id="nbrPers">
-			<label>Nombre d'adultes : </label>
-			<input>
-			<label>Nombre d'enfants : </label>
-			<input>
+			<label>Nombre de personnes : </label>
+			<input id="place" name="place" type="number" placeholder="2" require>
 		</div>
-			
+			<button>Recherche</button>
+		</form>
         </figcaption>
 	</figure>
+
+
 	
+
+
+
 	<h2>Les meilleurs avis</h2>
 
 		<div id="Carousel">
@@ -89,7 +98,7 @@ require_once '../views/Layout/header.php';
 		<h3>Paris</h3>
 		<p>Ville romantique par excellence, elle attire les touristes tout au long de l'année. La capitale française est si riche qu'il ne suffit pas de quelques heures pour la visiter.</p>
 		<p>Entre monuments, musées, boutiques, parcs, gastronomie, les choix ne manquent pas ! Quelles que soient vos préférences, vous apprécierez cette ville aux mille visages.</p>
-		<button>Voir +</button>
+		<a><button>Voir +</button></a>
 	</section>
 	<section>
 		<img src="Image/st-tropez.jpg">
@@ -97,8 +106,7 @@ require_once '../views/Layout/header.php';
 		<p>Capitale touristique internationale, devenu un mythe, St Tropez a contribué à la renommée de la Côte d'Azur.</p>
 		<p>A St Tropez tout y est célèbre et célébré :</p>
 		<p>- La place des Lices où, sous les platanes, ont lieu des parties de pétanques mêlant vedettes du show business et locales portant les fameuses sandales de cuir, les "Tropéziennes" et sirotant le Pastis à l'apéritif.</p>
-		<button>Voir +</button>
-	</section>
+		<a><button>Voir +</button></a>	</section>
 	</div>
 
 </main>
