@@ -1,9 +1,10 @@
+
+/*Page accueil */
 body{
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 
 }
-
 header{
 	background: #27233E;
 	height: 5vw;
@@ -36,7 +37,7 @@ figure {
 figure figcaption {
     position:absolute;
     width:47vw;
-    height: 20vw;
+    height: 23vw;
     background:rgba(255,255,255, 0.7);
     top:13vw;
     left:27vw;
@@ -51,6 +52,15 @@ figure figcaption h1 {
 figure figcaption div {
 
 	padding-top: 1vw;
+}
+
+figure figcaption button{
+	margin: 1vw 0 0 18vw !important;
+	background:#27233E;
+	color:white;
+	border: none;
+	font-size: 20px;
+
 }
 
 #nbrPers input{
@@ -90,9 +100,11 @@ section h3{
 }
 
 section button{
-	margin: 0 0 2vw 20vw;
+	margin: 0 0 2vw 20vw !important;
 	background:#27233E;
 	color:white;
+	border: none;
+	font-size: 17px;
 }
 
 #Destination{
@@ -116,3 +128,80 @@ footer a {
 	font-size: 20px;
 	padding-top:2vw;
 }
+
+/*Page recherche */
+
+h1{
+	text-align: center;
+	margin-top: 2vw !important;
+}
+
+#recherche{
+	display: flex;
+	justify-content: center;
+
+	border-bottom: solid 1px;
+}
+
+#recherche input{
+	margin:1vw;
+}
+
+#recherche button{
+	margin: 1vw 0 2vw 18vw !important;
+	background:#27233E;
+	color:white;
+	border: none;
+	font-size: 20px;
+
+}
+
+article{
+	margin: 2vw 0 3vw 2vw ;
+	display: flex  !important;
+}
+
+
+#description{
+
+	width: 40vw;
+	margin: 2vw 0 0 10vw;
+	display: flex;
+	align-items: center;
+
+}
+
+#description button{
+	background:#27233E;
+	color:white;
+	border: none;
+	font-size: 20px;
+	margin-left: 1vw !important;
+}
+
+#etoile{
+	display: flex;
+	justify-content: center;
+}
+
+#etoile i{
+	margin:1vw;
+}
+
+
+/* page inscription et connection*/
+
+.inscription, .connexion{
+	margin:3vw 0 2vw 3vw;
+}
+
+button{
+	margin: 2vw 0  3vw 45vw  !important;
+	background:#27233E;
+	color:white;
+	border: none;
+	font-size: 20px !important;
+	width: 10vw;
+	height: 3vw;
+}
+
