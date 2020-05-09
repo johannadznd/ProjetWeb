@@ -205,3 +205,23 @@ button{
 	height: 3vw;
 }
 
+
+#profil{
+	margin: 5vw 0 2vw 4vw;
+}
+
+#profil button{
+
+	margin: 2vw 0 0 40vw !important;
+}
+
+.mesBiens{
+	display: flex;	
+	justify-content: space-around;	
+}
+
+.mesBiens a {
+	
+	color:black;
+	margin: 20vw 0 0 10vw !important;
+}
