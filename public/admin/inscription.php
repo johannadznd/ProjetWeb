@@ -1,7 +1,7 @@
 <?php
 
-require_once '../views/Layout/header.php';
-require_once '../Fonctions/bien.php';
+require_once '../../views/Layout/header.php';
+require_once '../../Fonctions/bien.php';
 
 
 
@@ -69,4 +69,4 @@ if (!empty($_POST) && !empty($_POST['UserName']) && !empty($_POST['Email']) && !
   $insert = insertUser($UserName,$Email,$Password,$FirstName,$LastName);
 }
 
-require_once '../views/Layout/footer.php';
+require_once '../../views/Layout/footer.php';
