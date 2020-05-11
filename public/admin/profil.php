@@ -32,7 +32,7 @@ foreach ($users as $user);
     <img src="../Image/villa1.jpg"> 
     <a href="#">Modifider le bien</a> <br>
     <a href="#">Supprimer le bien</a><br>
-    <a href="#">Accéder au bien</a><br>
+    <a href="/bien.php?id=<?php echo $user['id'] ?>">Accéder au bien</a><br>
 
   </section>
 <?php } ?>
