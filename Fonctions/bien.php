@@ -72,7 +72,7 @@ function connection(?string $UserName=null,?string $Password=null){
 function getUser(string $id):array{
 
   $pdo =getPdo();
-  $query = "SELECT user.id ,UserName , Email, FirstName, LastName, Titles, Adresse FROM user INNER JOIN announce ON user.id = announce.UserId WHERE user.id = :id
+  $query = "SELECT user.id ,UserName , Email, FirstName, LastName, Titles, Adresse, announce.id FROM user INNER JOIN announce ON user.id = announce.UserId WHERE user.id = :id
   ";
 
   $stmt = $pdo->prepare($query);

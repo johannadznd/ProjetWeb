@@ -16,7 +16,7 @@
       <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, exercitationem rem corrupti cupiditate excepturi perspiciatis quis cum illum qui odit animi sunt quaerat nisi quisquam laboriosam quam ratione velit quas. 
 </br>Prix à la nuit : 500€
-    <a><button>Voir le bien</button></a>
+    <a href="/bien.php?id=<?php echo $bien['id'] ?>"><button>Voir le bien</button></a>
       </p>
   
 </div>

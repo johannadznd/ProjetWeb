@@ -159,6 +159,7 @@ h1{
 article{
 	margin: 2vw 0 3vw 2vw ;
 	display: flex  !important;
+	justify-content: space-around;
 }
 
 
