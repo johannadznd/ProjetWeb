@@ -37,7 +37,7 @@ figure {
 figure figcaption {
     position:absolute;
     width:47vw;
-    height: 23vw;
+    height: 27vw;
     background:rgba(255,255,255, 0.7);
     top:13vw;
     left:27vw;
@@ -166,9 +166,9 @@ article{
 #description{
 
 	width: 40vw;
-	margin: 2vw 0 0 10vw;
+	margin: 5vw 0 0 30vw;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 
 }
 
@@ -225,4 +225,26 @@ button{
 	
 	color:black;
 	margin: 20vw 0 0 10vw !important;
+}
+
+#modifier{
+	display: flex;
+	flex-direction: column;
+	margin: 3vw 0 0 3vw;
+}
+
+#modifier div{
+	margin: 1vw;
+}
+
+#editdescription{
+	display:flex;
+	flex-direction: column;
+	text-align: center;	
+}
+
+#editdescription textarea{
+	width: 30vw;
+	height: 10vw;
+	margin: 1vw 0 2vw 33vw !important;
 }

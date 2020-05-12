@@ -28,8 +28,12 @@ $bien = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <section>
 <h3>Description</h3>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quos iure sapiente harum voluptates at totam nobis, fugit ut quis minima eaque ab temporibus, placeat cumque nemo excepturi. Repellat, nisi.</p>
-<p>Prix : 500 €</p>
+<br>
+<br>
+<p><?php echo $bien['Descriptions']; ?></p>
+<p>Prix : <?php echo $bien['Price'];?> €</p>
+<p>Disponible du <?php echo date($bien['StartDate']);?> au <?php echo date($bien['EndDate']);?></p>
+<br>
 <a style="margin-left: -10vw"><button>Louez moi</button></a>
 </section>
 
