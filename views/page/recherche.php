@@ -13,11 +13,9 @@
    
   </section>
   <div id="description">
-      <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, exercitationem rem corrupti cupiditate excepturi perspiciatis quis cum illum qui odit animi sunt quaerat nisi quisquam laboriosam quam ratione velit quas. 
-</br>Prix à la nuit : 500€
-    <a href="/bien.php?id=<?php echo $bien['id'] ?>"><button>Voir le bien</button></a>
-      </p>
-  
+    <p><?php echo $bien['Descriptions']; ?></p>
+    <p>Disponible du <?php echo date($bien['StartDate']);?> au <?php echo date($bien['EndDate']);?></p>
+    <p>Prix à la nuit : <?php echo $bien['Price'];?> €</p>
+    <a href="/bien.php?id=<?php echo $bien['id']; ?>"><button>Voir le bien</button></a>
 </div>
 </article>

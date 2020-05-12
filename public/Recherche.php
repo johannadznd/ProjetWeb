@@ -3,9 +3,11 @@
 require_once '../views/Layout/header.php';
 require_once '../Fonctions/bien.php';
 $search = $_GET['search'] ?? null ;
-$place = $_GET['place'];
-
-$biens = getAnnounce($search,$place);
+$place = $_GET['place'] ?? null;
+$StartDate = $_GET['StartDate'] ?? null ;
+$EndDate = $_GET['EndDate'] ?? null ;
+$Price = $_GET['Price'] ?? null ;
+$biens = getAnnounce($search,$place,$StartDate,$EndDate,$Price);
 ?>
 <h1>Votre recherche</h1>
 
@@ -17,15 +19,18 @@ $biens = getAnnounce($search,$place);
       </div>
       <div id="date">
         <label>Date d'arrivé : </label>
-        <input type="date">
+        <input type="date" id="StartDate" name="StartDate" value="<?php echo $StartDate; ?>">
         <label>Date de départ : </label>
-        <input type="date">
+        <input type="date" id="EndDate" name="EndDate" value="<?php echo $EndDate; ?>">
       </div>
       <div id="nbrPers">
         <label>Nombre de personnes : </label>
         <input id="place" name="place"  type="number" placeholder="2" value="<?php echo $place; ?>">
-       
       </div>
+      <div>
+			<label>Prix maximal : </label>
+			<input id="Price" name="Price" type="number" value="<?php echo $Price; ?>" >
+		</div>
         <button>Modifier</button>
   </form>
 </div>

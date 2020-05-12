@@ -30,7 +30,7 @@ foreach ($users as $user);
  <section >
     <h3><?php echo $user['Titles']?></h3>
     <img src="../Image/villa1.jpg"> 
-    <a href="#">Modifider le bien</a> <br>
+    <a href="/admin/editBien.php?id=<?php echo $user['id'] ?>">Modifider le bien</a> <br>
     <a href="#">Supprimer le bien</a><br>
     <a href="/bien.php?id=<?php echo $user['id'] ?>">Accéder au bien</a><br>
 
