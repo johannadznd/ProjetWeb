@@ -23,21 +23,33 @@ $bien = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <h1><?php echo $bien['Titles'];?></h1>
 
-<article>
-<img style="width: 40vw" src="Image/villa1.jpg">   
-
+<article id="bien">
+<img style="width: 40%;height:40%" src="Image/<?php echo $bien['Pictures']; ?>">   
 <section>
-<h3>Description</h3>
+<h3>Description du bien</h3>
 <br>
 <br>
-<p><?php echo $bien['Descriptions']; ?></p>
-<p>Prix : <?php echo $bien['Price'];?> €</p>
-<p>Disponible du <?php echo date($bien['StartDate']);?> au <?php echo date($bien['EndDate']);?></p>
+<p>Description : <?php echo $bien['Descriptions']; ?></p>
+<p>Adresse : <?php echo $bien['Adresse'] ?></p>
+<p>Prix à la nuit/personne : <?php echo $bien['Price'];?> €</p>
+<p>Disponible du : <?php echo date($bien['StartDate']);?> au : <?php echo date($bien['EndDate']);?></p>
 <br>
 <a style="margin-left: -10vw"><button>Louez moi</button></a>
 </section>
 
 </article>
+
+<iframe 
+
+  style="margin: 2vw 0 2vw 035vw"
+    width="400" 
+    height="300" 
+    frameborder="0" 
+    scrolling="no" 
+    marginheight="0" 
+    marginwidth="0" 
+    src="<?php echo $bien['map'] ?>">
+</iframe>
 
 
 <?php

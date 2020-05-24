@@ -6,8 +6,7 @@ $search = $_GET['search'] ?? null ;
 $place = $_GET['place'] ?? null;
 $StartDate = $_GET['StartDate'] ?? null ;
 $EndDate = $_GET['EndDate'] ?? null ;
-$Price = $_GET['Price'] ?? null ;
-$biens = getAnnounce($search,$place,$StartDate,$EndDate,$Price);
+$biens = getAnnounce($search,$place,$StartDate,$EndDate);
 ?>
 <h1>Votre recherche</h1>
 
@@ -27,10 +26,6 @@ $biens = getAnnounce($search,$place,$StartDate,$EndDate,$Price);
         <label>Nombre de personnes : </label>
         <input id="place" name="place"  type="number" placeholder="2" value="<?php echo $place; ?>">
       </div>
-      <div>
-			<label>Prix maximal : </label>
-			<input id="Price" name="Price" type="number" value="<?php echo $Price; ?>" >
-		</div>
         <button>Modifier</button>
   </form>
 </div>

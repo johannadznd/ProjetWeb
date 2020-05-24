@@ -34,13 +34,16 @@ figure {
 	margin:0;
 }
 
+figure img{
+	width: 100%;
+}
 figure figcaption {
     position:absolute;
-    width:47vw;
-    height: 27vw;
+    width:60vw;
+    height: 37w;
     background:rgba(255,255,255, 0.7);
-    top:13vw;
-    left:27vw;
+    top:11vw;
+    left:20vw;
     padding:1vw 1vw 2vw 15px;
 }
 
@@ -60,11 +63,13 @@ figure figcaption button{
 	color:white;
 	border: none;
 	font-size: 20px;
+	width: 14vw;
+	height: 4vw;
 
 }
 
 #nbrPers input{
-	width: 3vw;
+	width: 4vw;
 	margin-right: 8.3vw;
 }
 
@@ -72,6 +77,7 @@ figure figcaption button{
 
 #date input{
 	margin-right: 1vw;
+
 }
 
 
@@ -79,12 +85,6 @@ h2{
 	text-align: center;
 	font-size: 30px;
 	padding: 3vw;	
-}
-
-#Carousel{
-	display: flex;
-	justify-content: space-around;
-	margin-bottom: 2vw;
 }
 
 section{
@@ -100,7 +100,7 @@ section h3{
 }
 
 section button{
-	margin: 0 0 2vw 20vw !important;
+	margin: 0 0 10vw 18vw !important;
 	background:#27233E;
 	color:white;
 	border: none;
@@ -114,7 +114,7 @@ section button{
 
 footer{
 	background: #27233E;
-	height: 5vw;
+	height: 7%;
 }
 
 footer li{
@@ -127,6 +127,7 @@ footer a {
 	color: white;
 	font-size: 20px;
 	padding-top:2vw;
+	padding-bottom: 1vw;
 }
 
 /*Page recherche */
@@ -180,14 +181,6 @@ article{
 	margin-left: 1vw !important;
 }
 
-#etoile{
-	display: flex;
-	justify-content: center;
-}
-
-#etoile i{
-	margin:1vw;
-}
 
 
 /* page inscription et connection*/
@@ -213,11 +206,12 @@ button{
 
 #profil button{
 
-	margin: 2vw 0 0 40vw !important;
+	margin: 2vw 0 0 35vw !important;
 }
 
 .mesBiens{
 	display: flex;	
+	flex-wrap: wrap;
 	justify-content: space-around;	
 }
 
@@ -247,4 +241,103 @@ button{
 	width: 30vw;
 	height: 10vw;
 	margin: 1vw 0 2vw 33vw !important;
+}
+
+#hôte{
+	display: flex;
+	flex-direction: column;
+	margin: 3vw 0 0 3vw;
+}
+
+#hôte div{
+	margin: 1vw;
+}
+#hote{
+	margin-left: 22vw !important;
+}
+
+@media screen and (max-width:740px){
+
+	header{
+		height: 13vw;
+	}
+
+	nav a img{
+		width: 9vw;
+	}
+	figure figcaption {
+		
+		width:100%;
+		height:50vw;
+		top:13vw;
+        left:0vw;
+        padding:0;
+	}
+
+	figure figcaption h1 {
+		font-size: 5vw;
+	
+	}
+
+	#date input{
+		width: 25vw;
+		margin: 0;
+	}
+	#nbrPers input{
+		width: 6vw;
+	}
+
+	figure figcaption button{
+		margin: 1vw 0 0 40vw !important;
+		font-size: 4vw;
+		width: 20vw;
+		height: 7vw;
+	}
+
+	section button{
+		width: 70%;
+		height: 10vw;
+	}
+	h1{
+	font-size: 5vw !important;
+	}
+	
+	#recherche button{
+		margin: 1vw 0 5vw 40vw!important;
+		width: 20%;
+		height: 25%;
+		font-size: 20px;
+	
+	}
+
+	button{
+		width: 45%;
+		height: 25%;
+	}
+
+	iframe{
+		margin-left: 10vw!important;
+	}
+	
+	#hote{
+		width: 30%;
+		margin-left: 35vw !important;
+
+	}
+	.mesBiens a {
+			margin: 0 0 0 4vw !important;
+	}
+}
+@media  (min-width:740px)and (max-width:1200px){
+
+
+	button{
+		width: 40%;
+		height: 11%;
+	}
+
+	#hote{
+		width: 30%;
+		margin-left: 20vw !important;
+	}
 }

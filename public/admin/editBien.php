@@ -14,7 +14,7 @@ if (!isset($_GET['id'])) { ?>
 $id = $_GET['id'];
   
 
-if (isset($_POST['Titles']) && isset($_POST['Descriptions']) && isset($_POST['Pictures']) && isset($_POST['PlaceAvailable']) && isset($_POST['Adresse']) && isset($_POST['Price']) && isset($_POST['StartDate']) && isset($_POST['EndDate'])) {
+if (isset($_POST['Titles']) && isset($_POST['Descriptions']) && isset($_POST['Pictures']) && isset($_POST['PlaceAvailable']) && isset($_POST['Adresse']) && isset($_POST['Price']) && isset($_POST['StartDate']) && isset($_POST['EndDate']) && isset($_POST['map'])) {
    
     $Titles = $_POST['Titles'];
     $Descriptions = $_POST['Descriptions'];
@@ -25,6 +25,7 @@ if (isset($_POST['Titles']) && isset($_POST['Descriptions']) && isset($_POST['Pi
     $StartDate = $_POST['StartDate'];
     $StartDate = $_POST['StartDate'];
     $EndDate =$_POST['EndDate'];
+    $map = $_POST['map'];
 
     $update = editBien(
       $Titles,
@@ -35,7 +36,8 @@ if (isset($_POST['Titles']) && isset($_POST['Descriptions']) && isset($_POST['Pi
       $Price,
       $StartDate,
       $EndDate,
-      $id
+      $id,
+      $map
     );
     
   }
@@ -56,12 +58,12 @@ $biens = getBien($id)
 
     <div>
         <label>Modifier l'adresse</label>
-        <input type="text" id="Adresse" name="Adresse" value="<?php echo $biens['Adresse']; ?>" >
+        <input style="width: 30vw" type="text" id="Adresse" name="Adresse" value="<?php echo $biens['Adresse']; ?>" >
     </div>
     
     <div> 
         <label>Changer la photo</label>
-        <input type="file" id="Pictures" name="Pictures"  value="<?php echo $biens['Pictures']; ?>" >
+        <input type="file" id="Pictures" name="Pictures" >
     </div>
    
     <div id="editdescription">
@@ -88,6 +90,10 @@ $biens = getBien($id)
     <div>
         <label>Changer le nombre de place</label>
         <input type="number" id="PlaceAvailable" name="PlaceAvailable" value="<?php echo $biens['PlaceAvailable']; ?>" >
+    </div>
+    <div>
+        <label>Changer la map</label>
+        <input style="width: 50vw" type="text" id="map" name="map" value="<?php echo $biens['map']; ?>" >
     </div>
     
     <button>Modifier</button>
