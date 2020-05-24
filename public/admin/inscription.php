@@ -32,6 +32,10 @@ require_once '../../Fonctions/bien.php';
 <input type="text" name="UserName" id="UserName">
 </div>
 
+<div class="inscription">
+<label>Credit account</label>
+<input type="number" name="CreditAccount" id="CreditAccount">
+</div>
 
 <div class="inscription">
 <label>Mot de passe</label>
@@ -45,12 +49,12 @@ require_once '../../Fonctions/bien.php';
 
 <div class="inscription">
 <label>Photo de profil</label>
-<input type="file" name="photo" id="photo"> 
+<input type="file" name="ProfilPicture" id="ProfilPicture"> 
 </div>
 <button type="submit">Inscription</button>
 </form>
 
-
+<p style="margin-left:1vw ">Vous avez déjà un compte ? <a href="connexion.php">Se connecter</a></p>
 
 <?php
 
@@ -59,14 +63,18 @@ require_once '../../Fonctions/bien.php';
 $insert = null;
 
 
-if (!empty($_POST) && !empty($_POST['UserName']) && !empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['FirstName']) && !empty($_POST['LastName'] && $Password === $Password2)) {
+if (!empty($_POST) && !empty($_POST['UserName']) && !empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['FirstName']) && !empty($_POST['LastName'] && $Password === $Password2) && !empty($_POST['CreditAccount']) && !empty ($_POST['ProfilPicture'])) {
   $UserName = $_POST['UserName'];
   $Email = $_POST['Email'];
   $Password = $_POST['Password'];
   $FirstName = $_POST['FirstName'];
   $LastName = $_POST['LastName'];
   $Password2 = $_POST['Password2'];
-  $insert = insertUser($UserName,$Email,$Password,$FirstName,$LastName);
+  $CreditAccount =$_POST['CreditAccount'];
+  $ProfilPicture =$_POST['ProfilPicture'];
+  $insert = insertUser($UserName,$Email,$Password,$FirstName,$LastName,$CreditAccount,$ProfilPicture);
 }
+
+
 
 require_once '../../views/Layout/footer.php';
