@@ -58,7 +58,7 @@ figure figcaption div {
 }
 
 figure figcaption button{
-	margin: 1vw 0 0 18vw !important;
+	margin: 1vw 0 0 21vw !important;
 	background:#27233E;
 	color:white;
 	border: none;
@@ -303,13 +303,11 @@ button{
 	}
 	
 	#recherche button{
-		margin: 1vw 0 5vw 40vw!important;
+		margin: 1vw 0 5vw 40vw !important;
 		width: 20%;
-		height: 25%;
+		height: 30%;
 		font-size: 20px;
-	
 	}
-
 	button{
 		width: 45%;
 		height: 25%;
@@ -340,4 +338,11 @@ button{
 		width: 30%;
 		margin-left: 20vw !important;
 	}
+	#recherche button{
+		margin: 1vw 0 5vw 25vw !important;
+		width: 20%;
+		height: 24%;
+		font-size: 20px;
+	}
+	
 }

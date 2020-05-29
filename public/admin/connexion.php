@@ -17,11 +17,11 @@ require_once '../../views/Layout/header.php';
 
 <div class="connexion">
     <label>Nom d'utilisateur</label>
-    <input type="text" name="UserName" id="UserName">
+    <input type="text" name="UserName" id="UserName" required>
 </div>
 <div class="connexion"> 
     <label>Mot de passe</label>
-    <input type="password" name="Password" id="Password"> 
+    <input type="password" name="Password" id="Password" required> 
 </div>
 <button style="margin-bottom: 12.1vw !important" type="submit">Connexion</button>
 </form>

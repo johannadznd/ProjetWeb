@@ -34,7 +34,7 @@ $bien = $stmt->fetch(PDO::FETCH_ASSOC);
 <p>Prix à la nuit/personne : <?php echo $bien['Price'];?> €</p>
 <p>Disponible du : <?php echo date($bien['StartDate']);?> au : <?php echo date($bien['EndDate']);?></p>
 <br>
-<a style="margin-left: -10vw"><button>Louez moi</button></a>
+<a  style="margin-left: -10vw"><button>Louez moi</button></a>
 </section>
 
 </article>
