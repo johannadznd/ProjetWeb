@@ -11,9 +11,9 @@ if(isset($_SESSION['state']) && $_SESSION["state"] == "connected") {
 }
 ?>
 
-<figure>
+<figure >
 	 	<img style="width: 100%" src="/Image/chambre1.jpg">
-        <figcaption style="height: 55%">
+        <figcaption>
 			<h1>Devenir hôte</h1>
             <p style="text-align:center" >Pour devenir hôte nous devons récoltés des informations sur votre lieu</p>
             <p style="text-align:center" >Si vous cliquez sur le bouton, vous confirmez être majeur et avoir pris connaissance de toutes les conditons </p>

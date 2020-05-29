@@ -3,7 +3,7 @@
 require_once '../views/Layout/header.php';
 require_once '../Fonctions/bien.php';
 $search = $_GET['search'] ?? null ;
-$place = $_GET['place'] ?? null ;
+$place = $_GET['place'] ?? null;
 $StartDate = $_GET['StartDate'] ?? null ;
 $EndDate = $_GET['EndDate'] ?? null ;
 $biens = getAnnounce($search,$place,$StartDate,$EndDate);

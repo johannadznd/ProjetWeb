@@ -184,3 +184,34 @@ function insertbien(string $Titles,string $Descriptions,string $Pictures,string 
   ]);
 
 }
+
+
+function insertLouer(string $StartDate,string $EndDate,string $PricePerNight, string $NumberOfPersons,string $TotalAmount, string $AnnounceId,string $idUser,string $idReservation){
+
+  $pdo =getPdo();
+
+  $query1 = 'INSERT INTO reservation (StartDate, EndDate, PricePerNight, NumberOfPersons, TotalAmount, AnnounceId) VALUES (:StartDate,:EndDate,:PricePerNight,:NumberOfPersons,:TotalAmount,:AnnounceId)';
+
+  $stmt = $pdo->prepare($query1);
+  $insert = $stmt->execute([
+    'StartDate' => $StartDate,
+    'EndDate' => $EndDate,
+    'PricePerNight' => $PricePerNight,
+    'NumberOfPersons' => $NumberOfPersons,
+    'TotalAmount' => $TotalAmount,
+    'AnnounceId' => $AnnounceId
+
+  ]);
+
+  $query2 ='INSERT INTO avis (idUser, idReservation) VALUES (:idUser,:idReservation)';
+
+  $stmt = $pdo->prepare($query2);
+  $insert = $stmt->execute([
+
+    'idUser' => $idUser,
+    'idReservation' => $idReservation
+  
+    ]);
+
+
+}

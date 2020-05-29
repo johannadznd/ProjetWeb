@@ -14,37 +14,37 @@ require_once '../../Fonctions/bien.php';
 
 <div class="inscription"> 
 <label>Nom</label>
-<input type="text" name="LastName" id="LastName">
+<input type="text" name="LastName" id="LastName" required>
 </div>
 
 <div class="inscription">
 <label>Prénom</label>
-<input type="text" name="FirstName" id="FirstName">    
+<input type="text" name="FirstName" id="FirstName" required>    
 </div>
 
 <div class="inscription">
 <label>Email</label>
-<input style="width: 20vw" type="email" name="Email" id="Email">    
+<input style="width: 20vw" type="email" name="Email" id="Email" required>    
 </div>
 
 <div class="inscription">
 <label>Nom d'utulisateur</label>
-<input type="text" name="UserName" id="UserName">
+<input type="text" name="UserName" id="UserName" required>
 </div>
 
 <div class="inscription">
 <label>Credit account</label>
-<input type="number" name="CreditAccount" id="CreditAccount">
+<input type="number" name="CreditAccount" id="CreditAccount" >
 </div>
 
 <div class="inscription">
 <label>Mot de passe</label>
-<input type="password" name="Password" id="Password">   
+<input type="password" name="Password" id="Password" required>   
 </div>
 
 <div class="inscription">
 <label>Confirmation mot de passe</label>
-<input type="password" name="Password2" id="Password2">    
+<input type="password" name="Password2" id="Password2" required>    
 </div>
 
 <div class="inscription">

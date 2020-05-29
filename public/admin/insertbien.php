@@ -26,43 +26,43 @@ $id = $_GET['id'];
   
     <div>
         <label>Ajoutez un titre</label>
-        <input type="text" id="Titles" name="Titles" placeholder="Titre">
+        <input type="text" id="Titles" name="Titles" placeholder="Titre" required>
     </div>
 
     <div>
         <label>Ajouter votre adresse</label>
-        <input style="width: 30vw" type="text" id="Adresse" name="Adresse" placeholder="adresse">
+        <input style="width: 30vw" type="text" id="Adresse" name="Adresse" placeholder="adresse" required>
     </div>
     
     <div> 
         <label>Ajoutez une photo</label>
-        <input type="file" id="Pictures" name="Pictures">
+        <input type="file" id="Pictures" name="Pictures" required>
     </div>
    
     <div>
         <label>Ajoutez une description</label>
-        <textarea id="Descriptions" name="Descriptions" placeholder="Votre description"></textarea>
+        <textarea id="Descriptions" name="Descriptions" placeholder="Votre description" required></textarea>
     </div>
   
     <div>
         <label>Ajouter date de début</label>
-        <input type="date" id="StartDate" name="StartDate"  placeholder="12/01/2021">
+        <input type="date" id="StartDate" name="StartDate"  placeholder="12/01/2021" required>
         
     </div>
 
     <div>
         <label>Ajouter date de fin</label>
-        <input type="date" id="EndDate" name="EndDate" placeholder="12/01/2021">
+        <input type="date" id="EndDate" name="EndDate" placeholder="12/01/2021" required>
     </div>
    
     <div>
         <label>Ajoutez votre prix</label>
-        <input type="number" id="Price" name="Price" placeholder="150" >
+        <input type="number" id="Price" name="Price" placeholder="150" required>
     </div>
   
     <div>
         <label>Ajouter votre nombre de place</label>
-        <input type="number" id="PlaceAvailable" name="PlaceAvailable" placeholder="4" >
+        <input type="number" id="PlaceAvailable" name="PlaceAvailable" placeholder="4" required>
     </div>
 
     <div>
